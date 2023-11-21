@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block 'content' %}
+
+<main>
+    <div class="banner">
+        <h1>{{ exercice.title }}</h1>
+    </div>
+
+    <div class="extra">
+        <h2 style="margin: 0 0 10px 0; text-align:center;">About Exercice</h2>
+        <p><strong>Auteur : </strong>{{ exercice.author.username }}</p>
+        <p><strong>Description : </strong>{{ exercice.description }}</p>
+    </div>
+
+    <div class="container" style="margin-top: 100px; padding: 40px 30px;">
+        <h3 style="text-align: center; margin: 0 0 30px 0;">Remplir le formulaire pour résoudre l'exercice</h3>
+        <div class="exercice_form">
+
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="text" name="first_input" placeholder="{{ placholder1 }}">
+                <input type="text" name="second_input" placeholder="{{ placeholder2 }}">
+                <button type="submit">Calculer</button>
+            </form>
+
+        </div>
+    </div>
+    <div class="results container">
+        <h3 style="text-align: center; margin: 0 0 30px 0;">Résultat de l'exercice</h3>
+
+
+        <!-- {%if result != 0 %} -->
+        <div class="result_field">
+            <h3>{{ exercice.resultat }}</h3>
+        </div>
+        <!-- {% endif %} -->
+    </div>
+</main>
+
+{% endblock%}

@@ -1,0 +1,44 @@
+{% include 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<main>
+
+    <div class='header_container'>
+        <header>
+            <h1>Welcome Collaborators !</h1>
+            <h4>This is where we'll show up our work</h4>
+        </header>
+    </div>
+
+    <h1 class='section_title'>Projects List</h1>
+
+
+    <div class='projects_container'>
+
+        {% for exercice in exercices_list %}
+
+        <div class='project'>
+            <a href="{% url 'details' exercice.id %}">
+                <img src="{% static 'images/code2.jpg'%}" width="100%" height="220" alt="Placeholder" />
+            </a>
+            <div class='text_holder'>
+                <h3 style="margin-bottom: 12px; font-weight: bold">{{exercice.title}}</h3>
+                <p style="color: #444; margin-bottom: 4px 0;">{{exercice.description| truncatechars:80}}</p>
+
+                <p class="username">@{{ exercice.author.username}}</p>
+                <p style="color: gainsboro; font-size: 12px">
+                    {{exercice.created_at}}
+                </p>
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</main>
+
+{% endblock %}

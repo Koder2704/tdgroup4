@@ -1,0 +1,155 @@
+* {
+    font-family: 'Oxygen', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+}
+
+.header_container {
+    height: 100vh;
+    width: 100vw;
+    background: url('../images/hero.jpg') no-repeat center center / cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    z-index: 20;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    text-align: right;
+    line-height: 1.6;
+}
+
+header h1,
+h4 {
+    color: white;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.section_title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 52px;
+    margin: 40px 0 0 0;
+}
+
+.projects_container {
+    height: 100vh;
+    width: 100vw;
+
+    padding: 4rem 80px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.project {
+    overflow: hidden;
+    max-width: 340px;
+    max-height: 420px;
+    height: 100%;
+    text-overflow: clip;
+    box-shadow: 0 6px 16px 1px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.project:hover {
+    position: relative;
+    transform-origin: center;
+    transform: scale(1.1);
+    transition: .2s linear;
+}
+
+.text_holder {
+    padding: 10px 20px;
+}
+
+.text_holder .username {
+    font-size: 14px;
+    color: gainsboro;
+    margin: 0;
+}
+
+
+
+/* Details Vue */
+.banner {
+    height: 20vh;
+    background: url('../images/hero.jpg') no-repeat center center / cover;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h1 {
+    font-size: 3em;
+}
+
+.extra {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.results {
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 40px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 60%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
