@@ -22,8 +22,12 @@
 
             <form action="" method="post">
                 {% csrf_token %}
-                <input type="text" name="first_input" placeholder="{{ placholder1 }}">
+                <input type="text" name="first_input" placeholder="{{ placeholder1 }}">
                 <input type="text" name="second_input" placeholder="{{ placeholder2 }}">
+
+                {% if error_message != '' %}
+                    <p style="color: red; margin: 10px 20px">{{ error_message }}</p>
+                {% endif %}
                 <button type="submit">Calculer</button>
             </form>
 

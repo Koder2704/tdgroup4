@@ -120,6 +120,11 @@ header h1 {
 
 .results {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+
 }
 
 form {
